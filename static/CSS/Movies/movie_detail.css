@@ -1,0 +1,68 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.movie-detail-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.movie-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.movie-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-info {
+    flex: 2;
+    padding: 30px;
+}
+
+.movie-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.movie-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .movie-detail-container {
+        flex-direction: column;
+    }
+
+    .movie-info {
+        padding: 20px;
+    }
+}

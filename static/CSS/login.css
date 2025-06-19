@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(135deg,  #5a5555, #af8787);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 500px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 30px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #cc0000;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ff4d4d;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #e60000;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b30000;
+}
