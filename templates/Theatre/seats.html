@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookMyShow Seat Selection</title>
+  <link rel="stylesheet" href="{% static 'css/Theatre/seats.css' %}">
+</head>
+<body>
+  <h1>BookMyShow Seat Selection</h1>
+  <div class="screen">SCREEN</div>
+  <div class="seat-container" id="seat-container"></div>
+
+  <div class="legend">
+    <div><span class="available"></span>Available</div>
+    <div><span class="booked"></span>Booked</div>
+    <div><span class="selected"></span>Selected</div>
+  </div>
+
+  <script>
+    const rows = 6;
+    const cols = 10;
+    const bookedSeats = [2, 5, 12, 13, 18, 30, 33, 42, 45];
+    const container = document.getElementById("seat-container");
+
+    for (let i = 0; i < rows * cols; i++) {
+      const seat = document.createElement("div");
+      seat.classList.add("seat");
+      seat.dataset.index = i;
+
+      if (bookedSeats.includes(i)) {
+        seat.classList.add("booked");
+      } else {
+        seat.addEventListener("click", () => {
+          seat.classList.toggle("selected");
+        });
+      }
+
+      container.appendChild(seat);
+    }
+  </script>
+</body>
+</html>

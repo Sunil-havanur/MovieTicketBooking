@@ -18,12 +18,15 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from Theatres.views import add_seat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Accounts/',include('Accounts.urls')),
     path('Accounts/', include('allauth.urls')),
     path('Movies/',include('Movies.urls')),
+    path('',include('Dashboard.urls')),
+    path('bookings/',include('Bookings.urls')),
 ]
 
 if settings.DEBUG:

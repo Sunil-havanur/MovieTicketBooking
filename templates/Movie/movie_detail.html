@@ -23,4 +23,5 @@
             <p><strong>Status:</strong>{{ movie.status }}</p>
         </div>
     </div>
+    <a href="{% url 'Theatre_showtimes' movie.slug date %}" class="btn">Book Tickets</a>
 {% endblock %}

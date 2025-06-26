@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% for show in showtimes %}
+<div>
+
+    {{show.theatre}} {{show.movie}} {{show.show_time}}
+
+</div>
+{% endfor %}
+
+{% endblock %}

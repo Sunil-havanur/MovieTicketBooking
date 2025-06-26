@@ -1,15 +1,19 @@
-{% extends "base.html" %}
 {% load static %}
-{% block title %}Now Showing{% endblock %}
-{% block content %}
-<link rel="stylesheet" href="{% static 'css/movies/movie_list.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/movies/movie_list.css' %}">
+</head>
+<body>
 
     <div class="container">
         <h1 class="title">Now Showing</h1>
         <div class="movie-grid">
             {% for movie in movies %}
                 <div class="movie-card">
-                    <a href="{% url 'movie_detail' movie.id %}">
+                    <a href="{% url 'movie_detail' movie.slug %}">
                         <div class="movie-image">
                             <img src="{{ movie.movie_image.url }}" alt="{{ movie.title }}">
                         </div>
@@ -24,4 +28,5 @@
             {% endfor %}
         </div>
     </div>
-{% endblock %}
+</body>
+</html>
